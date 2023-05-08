@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VeterinariaASPWebApi.Models;
 
 public partial class Usuario
 {
-    public int Id { get; set; }
+    public int UsuarioId { get; set; }
 
     public string? Nombre { get; set; }
 
@@ -19,5 +20,6 @@ public partial class Usuario
 
     public int? Sexo { get; set; }
 
+    [NotMapped]
     public virtual ICollection<Mascota> Mascota { get; } = new List<Mascota>();
 }

@@ -29,7 +29,7 @@ namespace VeterinariaASPWebApi.ServicesImpl
             var usuarios = _dbContext.Usuarios.ToList();
             var usuarioDtos = usuarios.Select(usuario => new UsuaorioDto
             {
-                Id = usuario.Id,
+                Id = usuario.UsuarioId,
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
                 TipoDocumento = usuario.TipoDocumento,
@@ -50,7 +50,7 @@ namespace VeterinariaASPWebApi.ServicesImpl
 
             var usuarioDto = new UsuaorioDto
             {
-                Id = usuario.Id,
+                Id = usuario.UsuarioId,
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
                 TipoDocumento= usuario.TipoDocumento,
@@ -78,7 +78,7 @@ namespace VeterinariaASPWebApi.ServicesImpl
 
             var usuarioDto = new UsuaorioDto
             {
-                Id = usuario.Id,
+                Id = usuario.UsuarioId,
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
                 TipoDocumento = usuario.TipoDocumento,  
@@ -108,7 +108,7 @@ namespace VeterinariaASPWebApi.ServicesImpl
 
             var usuarioDto = new UsuaorioDto
             {
-                Id = usuario.Id,
+                Id = usuario.UsuarioId,
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
                 TipoDocumento = usuario.TipoDocumento,  

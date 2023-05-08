@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\snake\\Documents\\VeterinariaASPWebApi\\VeterinariaASPWebApi\\VeterinariaASPWebApi.csproj": {}
+    "C:\\Users\\snake\\Documents\\curso\\veterinariaApi\\VeterinariaASPWebApi\\VeterinariaASPWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\snake\\Documents\\VeterinariaASPWebApi\\VeterinariaASPWebApi\\VeterinariaASPWebApi.csproj": {
+    "C:\\Users\\snake\\Documents\\curso\\veterinariaApi\\VeterinariaASPWebApi\\VeterinariaASPWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\snake\\Documents\\VeterinariaASPWebApi\\VeterinariaASPWebApi\\VeterinariaASPWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\snake\\Documents\\curso\\veterinariaApi\\VeterinariaASPWebApi\\VeterinariaASPWebApi.csproj",
         "projectName": "VeterinariaASPWebApi",
-        "projectPath": "C:\\Users\\snake\\Documents\\VeterinariaASPWebApi\\VeterinariaASPWebApi\\VeterinariaASPWebApi.csproj",
+        "projectPath": "C:\\Users\\snake\\Documents\\curso\\veterinariaApi\\VeterinariaASPWebApi\\VeterinariaASPWebApi.csproj",
         "packagesPath": "C:\\Users\\snake\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\snake\\Documents\\VeterinariaASPWebApi\\VeterinariaASPWebApi\\obj\\",
+        "outputPath": "C:\\Users\\snake\\Documents\\curso\\veterinariaApi\\VeterinariaASPWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\snake\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,15 +52,15 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.4, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[7.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

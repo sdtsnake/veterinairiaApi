@@ -76,7 +76,7 @@ namespace VeterinariaASPWebApi.ServicesImpl
                 throw new Exception("El usuario asociado a la mascota no existe en la base de datos.");
             }
 
-            var existingUsuario = _context.Usuarios.Local.FirstOrDefault(u => u.Id == usuario.Id);
+            var existingUsuario = _context.Usuarios.Local.FirstOrDefault(u => u.UsuarioId == usuario.UsuarioId);
 
             if (existingUsuario != null)
             {
@@ -102,7 +102,7 @@ namespace VeterinariaASPWebApi.ServicesImpl
                 Sexo = mascota.Sexo,
                 UsuarioMascotaDto = new UsuarioMascotaDto
                 {                   
-                    Id = usuario.Id,
+                    Id = usuario.UsuarioId,
                     Nombre = usuario.Nombre,
                     Apellido = usuario.Apellido,
                     DocumentoIdentificacion = usuario.DocumentoIdentificacion
@@ -148,7 +148,7 @@ namespace VeterinariaASPWebApi.ServicesImpl
                 Sexo = mascota.Sexo,
                 UsuarioMascotaDto = new UsuarioMascotaDto
                 {
-                    Id = usuario.Id,
+                    Id = usuario.UsuarioId,
                     Nombre = usuario.Nombre,
                     Apellido = usuario.Apellido,                 
                     DocumentoIdentificacion = usuario.DocumentoIdentificacion,                    

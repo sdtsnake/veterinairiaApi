@@ -15,7 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //inyeccion del contexto
 builder.Services.AddDbContext<VeterinariaContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("VeterinariaConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("VeterinariaConnection")));
 
 //scopes de veterinaria
 
