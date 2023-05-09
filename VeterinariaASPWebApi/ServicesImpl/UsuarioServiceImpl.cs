@@ -1,4 +1,5 @@
-﻿using VeterinariaASPWebApi.Dto;
+﻿using Microsoft.EntityFrameworkCore;
+using VeterinariaASPWebApi.Dto;
 using VeterinariaASPWebApi.Models;
 using VeterinariaASPWebApi.Services;
 
@@ -63,6 +64,13 @@ namespace VeterinariaASPWebApi.ServicesImpl
 
         public async Task<UsuaorioDto> save(UsuarioPostDto usuarioPostDto)
         {
+            var usuarioExistente = await _dbContext.Usuarios.FirstOrDefaultAsync(u => u.DocumentoIdentificacion == usuarioPostDto.DocumentoIdentificacion);
+
+            if (usuarioExistente != null)
+            {
+                throw new Exception("Ya existe un usuario con el mismo DocumentoIdentificacion.");
+            }
+
             var usuario = new Usuario
             {
                 Nombre = usuarioPostDto.Nombre,
@@ -95,6 +103,14 @@ namespace VeterinariaASPWebApi.ServicesImpl
             if (usuario == null)
             {
                 throw new Exception($"El usuario con id {usuaorioUpdateDto.Id} no existe.");
+            }
+
+            // Verificar si ya existe otro usuario con el mismo DocumentoIdentificacion
+            var otroUsuarioConMismoDocumento = await _dbContext.Usuarios.FirstOrDefaultAsync(u => u.DocumentoIdentificacion == usuaorioUpdateDto.DocumentoIdentificacion && u.UsuarioId != usuaorioUpdateDto.Id);
+
+            if (otroUsuarioConMismoDocumento != null)
+            {
+                throw new Exception("Ya existe otro usuario con el mismo DocumentoIdentificacion.");
             }
 
             usuario.Nombre = usuaorioUpdateDto.Nombre;

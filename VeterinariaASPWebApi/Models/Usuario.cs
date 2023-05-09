@@ -18,7 +18,7 @@ public partial class Usuario
 
     public string? Estado { get; set; }
 
-    public int? Sexo { get; set; }
+    public string? Sexo { get; set; }
 
     [NotMapped]
     public virtual ICollection<Mascota> Mascota { get; } = new List<Mascota>();

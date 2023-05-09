@@ -22,6 +22,6 @@ namespace VeterinariaASPWebApi.Dto
 
         [EnumDataType(typeof(Sexo))]
         [SwaggerSchema("Sexo del usuario.")]
-        public int? Sexo { get; set; }
+        public string? Sexo { get; set; }
     }
 }
